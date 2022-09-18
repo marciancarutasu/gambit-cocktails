@@ -14,7 +14,7 @@ class List extends React.Component {
   };
 }
   componentDidMount() {
-    fetch('/api/json/v1/1/list.php?i=list')
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
     .then((response) => response.json())
     .then(ingredientsList => {
       for(let ingredient of ingredientsList.drinks) {
@@ -35,7 +35,7 @@ class List extends React.Component {
     });
 
     selectedOption.forEach(option => {
-      fetch(`/api/json/v1/1/filter.php?i=${option.value}`)
+      fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${option.value}`)
         .then((response) => response.json())
         .then(drinksList => {
           this.setState({drinks: {...drinksList, ingredient: option.value}}, () => {
