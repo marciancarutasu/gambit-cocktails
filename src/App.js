@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import { React, Component, useEffect, useState } from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter,
   Switch,
   Route,
   Link,
@@ -21,14 +21,14 @@ class App extends Component {
   render() {
       return (
           <div className="container">
-             <Router>
+             <HashRouter>
               <Header />
                   <Routes>
                       <Route path="/" element={ <Search/> } />
                       <Route path="/search" element={ <Search /> } />
                       <Route path="/list" element={ <List /> } />
                   </Routes>
-              </Router>
+              </HashRouter>
           </div>
       );
   }
