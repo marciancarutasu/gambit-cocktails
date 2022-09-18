@@ -37,7 +37,7 @@ const SearchList = ({data}) => {
                 <Col sm={4}>
                     <ListGroup>
                         {data.map(item => (
-                            <ListGroup.Item action href={"#" + item.idDrink} key={item.idDrink}>
+                            <ListGroup.Item action onClick={(e) => e.preventDefault()} href={item.idDrink} key={item.idDrink}>
                             {item.strDrink}
                             </ListGroup.Item>
                         ))}
@@ -46,7 +46,7 @@ const SearchList = ({data}) => {
                 <Col sm={8}>
                     <Tab.Content>
                         {data.map((item, index, arr) => (
-                             <Tab.Pane eventKey={"#" + item.idDrink} key={item.idDrink}>
+                             <Tab.Pane eventKey={item.idDrink} key={item.idDrink}>
                              <SearchDescription 
                                 instructions={item.strInstructions}
                                 thumb={item.strDrinkThumb}

@@ -12,7 +12,7 @@ function Search () {
 
   useEffect(() => {
     const fetchDrinks = async () => {
-        let res = await axios.get(`/api/json/v1/1/search.php?s=${query}`);
+        let res = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${query}`);
         console.log(res.data.drinks);
         if(select) {
           let non = [];
