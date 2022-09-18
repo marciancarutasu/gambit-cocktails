@@ -9,7 +9,7 @@ import SearchDescription from './SearchDescription';
 const SearchList = ({data}) => {
     if(data) {
         if(data.length === 1) {
-            var tabActive = "#";
+            var tabActive = "";
             tabActive += data[0].idDrink;
         }
 

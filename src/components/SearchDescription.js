@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-function Sonnet(props) {
+function SearchDescription (props) {
     return (
         <div>
             <img className="drinkThumb" src={props.thumb} alt={props.instructions} />
@@ -10,4 +10,4 @@ function Sonnet(props) {
     );
 }
 
-export default Sonnet;
+export default SearchDescription;
